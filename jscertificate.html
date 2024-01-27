@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="jscertificate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="jscertificate.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body style="width:99%;">
+    <div class="row" id = "navicon">
+        <div class="col-10">
+            <p class="signnav"><i class="fa-brands fa-js"></i>.Script</p>
+        </div>
+        <div class="col-2">
+            <a class="nav-link active" href="main.html"><i class="fa-solid fa-xmark"></i></a></button>
+        </div>
+    </div>
+    <button id="prevbtn" onclick="inputvalue()">Preview Certificate</button>
+    <div class="certificate" id = "getcertificate" >
+        <div class="card">
+            <div class="card-body">
+                <h2>Certificate of Completion</h2>
+                <h3>This is to certify that</h3>
+                <h3 id="inputname"></h3>
+                <h3>has successfully completed the certification</h3>
+                <h3>JavaScript Developer</h3>
+                <h5>with score of <span id="scoress"></span></h5>
+                <h4>Date:</h4>
+                <h4 id = time></h4>
+            </div>
+        </div>
+    </div>
+    <button id="DowBtn" onclick="downloadFile()">Dowload</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="jssignup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="jslogin.js" defer></script>
+</head>
+<body style="width:99%;">
+    <div class="row">
+        <div class="col-10">
+            <p class="signnav"><i class="fa-brands fa-js"></i>.Script</p>
+        </div>
+        <div class="col-2">
+            <a class="nav-link active" href="main.html"><i class="fa-solid fa-xmark"></i></a></button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="sign">Log in</p>
+            <form class="formin">
+                <div class="form-group">
+                    <label for="email" style="font-weight:700;">Email</label>
+                    <p class="form-control"><i class="fa-solid fa-envelope" style="font-size: 25px; margin-right: 10px;"></i><input type="text" id="email" name="email" autocomplete="email" style="border: none;" placeholder="Email" required></p>
+                </div>
+                <div class = "form-group">
+                    <label for="password" style="font-weight:700;">Password</label>
+                    <p class= "form-control"><i class="fa-solid fa-lock" style="font-size: 25px; margin-right: 10px;"></i><input type="password" autocomplete="current-password" id="password" name="password" placeholder="Password" style="border: none;" required></p>
+                </div>
+                <button type="button" id="login" onclick="loginbtn()" class="signbtn">Log in</button>
+            </form>
+            <div>
+                <p class="loglink">Need an account?<a href="jssignup.html" style="text-decoration: none;"><span class="link">Sign Up</span></a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

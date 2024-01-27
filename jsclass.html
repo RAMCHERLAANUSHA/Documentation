@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li>  
+                        <li><p class="dropdown-item" id="userscore"></p></li>              
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript Classes</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jsarrow.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="jsmodule.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <div class="declare">
+            <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.</p>
+            <p>JavaScript Classes are templates for JavaScript Objects.</p>
+        </div>
+        <h2>JavaScript Class Syntax</h2>
+        <p class="ptop">Use the keyword <span class="high">class</span> to create a class.</p>
+        <p>Always add a method named <span class="high">constructor()</span>:</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                class ClassName {<br>
+                    constructor() { ... }<br>
+                }
+            </p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                class Car {<br>
+                    constructor(name, year) {<br>
+                      this.name = name;<br>
+                      this.year = year;<br>
+                    }<br>
+                }
+            </p>
+        </div>
+        <p class="ptop">The example above creates a class named "Car".</p>
+        <p>The class has two initial properties: "name" and "year".</p>
+        <div class="declare">
+            <p>A JavaScript class is not an object.</p>
+            <p>It is a template for JavaScript objects.</p>
+        </div>
+        <h2>Using a Class</h2>
+        <p class="ptop">When you have a class, you can use the class to create objects:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const myCar1 = new Car("Ford", 2014);<br>
+                const myCar2 = new Car("Audi", 2019);
+            </p>
+        </div>
+        <p class="ptop">The example above uses the Car class to create two Car objects.</p>
+        <p class="declare">The constructor method is called automatically when a new object is created.</p>
+        <h2>The Constructor Method</h2>
+        <p class="ptop">The constructor method is a special method:</p>
+        <ul>
+            <li>It has to have the exact name "constructor"</li>
+            <li>It is executed automatically when a new object is created</li>
+            <li>It is used to initialize object properties</li>
+        </ul>
+        <p class="ptop">If we do not define a constructor method, JavaScript will add an empty constructor method.</p>
+        <h2>Class Methods</h2>
+        <p class="ptop">Class methods are created with the same syntax as object methods.</p>
+        <p>Use the keyword <span class="high">class</span> to create a class.</p>
+        <p>Always add a <span class="high">constructor()</span> method.</p>
+        <p>Then add any number of methods.</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                class ClassName {<br>
+                    constructor() { ... }<br>
+                    method_1() { ... }<br>
+                    method_2() { ... }<br>
+                    method_3() { ... }<br>
+                  }
+            </p>
+        </div>
+        <p class="ptop">Create a Class method named "age", that returns the Car age:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                class Car {<br>
+                    constructor(name, year) {<br>
+                      this.name = name;<br>
+                      this.year = year;<br>
+                    }<br>
+                    age() {<br>
+                      const date = new Date();<br>
+                      return date.getFullYear() - this.year;<br>
+                    }<br>
+                  }<br>      
+                  const myCar = new Car("Ford", 2014);<br>
+                  document.getElementById("demo").innerHTML =<br>
+                  "My car is " + myCar.age() + " years old.";
+            </p>
+        </div>
+        <p class="ptop">You can send parameters to Class methods:</p>
+        <div class="pad-bot">
+            <div class="example">
+                <h4>Example</h4>
+                <p class="examplep">
+                    class Car {<br>
+                        constructor(name, year) {<br>
+                        this.name = name;<br>
+                        this.year = year;<br>
+                        }<br>
+                        age(x) {<br>
+                        return x - this.year;<br>
+                        }<br>
+                    }<br>        
+                    const date = new Date();<br>
+                    let year = date.getFullYear();<br>            
+                    const myCar = new Car("Ford", 2014);<br>
+                    document.getElementById("demo").innerHTML=<br>
+                    "My car is " + myCar.age(year) + " years old.";
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

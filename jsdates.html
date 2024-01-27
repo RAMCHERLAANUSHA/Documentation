@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+    <!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript Date Objects</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jsevent.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="jsmath.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <div class="datetime">
+            <p>JavaScript Date Objects let us work with dates:</p>
+            <p id="demo"></p>
+            <script>
+                const d = new Date();
+                document.getElementById("demo").innerHTML = d;
+            </script>
+            <div>
+                <button class="yearbtn">
+                    <p id="currentyear"></p>
+                    <script>
+                        const y = d.getFullYear();
+                        document.getElementById("currentyear").innerHTML = "Year : " + y;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currentmonth"></p>
+                    <script>
+                        const m = d.getMonth();
+                        document.getElementById("currentmonth").innerHTML = "Month : " + m;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currentdate"></p>
+                    <script>
+                        const dat = d.getDate();
+                        document.getElementById("currentdate").innerHTML = "Day : " + dat;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currenthour"></p>
+                    <script>
+                        const h = d.getHours();
+                        document.getElementById("currenthour").innerHTML = "Hours : " + h;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currentminute"></p>
+                    <script>
+                        const min = d.getMinutes();
+                        document.getElementById("currentminute").innerHTML = "Minutes : " + min;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currentsecond"></p>
+                    <script>
+                        const sec = d.getSeconds();
+                        document.getElementById("currentsecond").innerHTML = "Seconds : " + sec;
+                    </script>
+                </button>
+                <button class="yearbtn">
+                    <p id="currentmillisecond"></p>
+                    <script>
+                        const milsec = d.getMilliseconds();
+                        document.getElementById("currentmillisecond").innerHTML = "Millisec : " + milsec;
+                    </script>
+                </button>
+            </div>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const d = new Date();
+            </p>
+            <p class="examplep">
+                const d = new Date("2022-03-25");
+            </p>
+        </div>
+        <div class="declare">
+            <h3>Note</h3>
+            <p class="ptop">Date objects are static. The "clock" is not "running".</p>
+            <p>The computer clock is ticking, date objects are not.</p>
+        </div>
+        <h2>JavaScript Date Output</h2>
+        <p class="ptop">By default, JavaScript will use the browser's time zone and display a date as a full text string:</p>
+        <p id="de"></p>
+        <script>
+            document.getElementById("de").innerHTML = d;
+        </script>
+        <h2>Creating Date Objects</h2>
+        <p>Date objects are created with the <span class="high">new Date()</span> constructor.</p>
+        <p>There are 9 ways to create a new date object:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                new Date()<br>
+                new Date(date string)<br>
+
+                new Date(year,month)<br>
+                new Date(year,month,day)<br>
+                new Date(year,month,day,hours)<br>
+                new Date(year,month,day,hours,minutes)<br>
+                new Date(year,month,day,hours,minutes,seconds)<br>
+                new Date(year,month,day,hours,minutes,seconds,ms)<br>
+
+                new Date(milliseconds)
+            </p>
+        </div>
+        <h2>new Date(year, month, ...)</h2>
+        <p class="ptop"><span class="high">new Date(year, month, ...)</span> creates a date object with a specified date and time.</p>
+        <p>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+            </p>
+        </div>
+        <div class="declare">
+            <h3>Note</h3>
+            <p class="ptop">
+                JavaScript counts months from 0 to 11:<br>
+                January = 0.<br>
+                December = 11.
+            </p>
+        </div>
+        <p class="ptop">Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+        <div class="pad-bot">
+            <div class="example">
+                <p class="pside">Specifying:</p>
+                <p class="examplep">
+                    const d = new Date(2018, 15, 24, 10, 33, 30);
+                </p>
+                <p class="pside">Is the same as:</p>
+                <p class="examplep">
+                    const d = new Date(2019, 3, 24, 10, 33, 30);
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

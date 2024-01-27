@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript this Keyword</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active" type="button" href="jstype.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active" type="button" href="jsarrow.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const person = {<br>
+                    firstName: "John",<br>
+                    lastName : "Doe",<br>
+                    id       : 5566,<br>
+                    fullName : function() {<br>
+                      return this.firstName + " " + this.lastName;<br>
+                    }<br>
+                };
+            </p>
+        </div>
+        <h2>What is <span style="font-weight: 800;">this?</span></h2>
+        <p class="ptop">In JavaScript, the <span class="high">this</span> keyword refers to an object.</p>
+        <p>Which object depends on how <span class="high">this</span> is being invoked (used or called).</p>
+        <p>The <span class="high">this</span> keyword refers to different objects depending on how it is used:</p>
+        <table class="table">
+            <tr>
+                <td>In an object method, <span class="high">this</span> refers to the object.</td>
+            </tr>
+            <tr>
+                <td>Alone, <span class="high">this</span> refers to the global object.</td>
+            </tr>
+            <tr>
+                <td>In a function, <span class="high">this</span> refers to the global object.</td>
+            </tr>
+            <tr>
+                <td>In a function, in strict mode, <span class="high">this</span> is <span class="high">undefined</span>.</td>
+            </tr>
+            <tr>
+                <td>In an event, <span class="high">this</span> refers to the element that received the event.</td>
+            </tr>
+            <tr>
+                <td>Methods like <span class="high">call()</span>, <span class="high">apply()</span>, and <span class="high">bind()</span> can refer <span class="high">this</span> to any object.</td>
+            </tr>
+        </table>
+        <div class="declare">
+            <h3>Note</h3>
+            <p class="ptop"><span class="high">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="high">this</span>.</p>
+        </div>
+        <h2><span style="font-weight: 800;">this</span> is a Method</h2>
+        <p class="ptop">When used in an object method, <span class="high">this</span> refers to the object.</p>
+        <p>In the example on top of this page, <span class="high">this</span> refers to the person object.</p>
+        <p>Because the fullName method is a method of the person object.</p>
+        <div class="example">
+            <p class="examplep">
+                fullName : function() {<br>
+                    return this.firstName + " " + this.lastName;<br>
+                }
+            </p>
+        </div>
+        <h2><span style="font-weight: 800;">this</span> Alone</h2>
+        <p class="ptop">When used alone, <span class="high">this</span> refers to the global object.</p>
+        <p>Because <span class="high">this</span> is running in the global scope.</p>
+        <p>In a browser window the global object is <span class="high">[object Window]</span>:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                let x = this;
+            </p>
+        </div> 
+        <p class="ptop">In strict mode, when used alone, <span class="high">this</span> also refers to the global object:</p>  
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                "use strict";<br>
+                let x = this;
+            </p>
+        </div>  
+        <h2><span style="font-weight: 800;">this</span> in a Function (Default)</h2>
+        <p class="ptop">In a function, the global object is the default binding for <span class="high">this</span>.</p>
+        <p>In a browser window the global object is <span class="high">[object Window]</span>:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                function myFunction() {<br>
+                    return this;<br>
+                }
+            </p>
+        </div>
+        <h2><span style="font-weight: 800;">this</span> in a Function (Strict)</h2>
+        <p class="ptop">JavaScript strict mode does not allow default binding.</p>
+        <p>So, when used in a function, in strict mode, <span class="high">this</span> is <span class="high">undefined</span>.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                "use strict";<br>
+                function myFunction() {<br>
+                return this;<br>
+                }
+            </p>
+        </div>
+        <h2><span style="font-weight: 800;">this</span> in Event Handlers</h2>
+        <p class="ptop">In HTML event handlers, <span class="high">this</span> refers to the HTML element that received the event:</p>
+        <div class="pad-bot">
+            <div class="example">
+                <h4>Example</h4>
+                <p class="examplep">
+                    &ltbutton onclick="this.style.display='none'"&gt
+                        Click to Remove Me!
+                    &lt/button&gt
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

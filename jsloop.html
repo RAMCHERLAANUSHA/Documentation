@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li>   
+                        <li><p class="dropdown-item" id="userscore"></p></li>             
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro" style="margin-bottom: 7100px;">
+        <h2 class="introh2">JavaScript Loops</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jsifelse.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="jstype.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <p>Loops can execute a block of code a number of times.</p><hr>
+        <p>Loops are handy, if you want to run the same code over and over again, each time with a different value.</p>
+        <p>Often this is the case when working with arrays:</p>
+        <div class="example">
+            <h4>Instead of writing:</h4>
+            <p class="examplep">
+                text += cars[0] + "&ltbr&gt";<br>
+                text += cars[1] + "&ltbr&gt";<br>
+                text += cars[2] + "&ltbr&gt";<br>
+                text += cars[3] + "&ltbr&gt";<br>
+                text += cars[4] + "&ltbr&gt";<br>
+                text += cars[5] + "&ltbr&gt";
+            </p>
+            <h4>You can write:</h4>
+            <p class="examplep">
+                for (let i = 0; i &lt cars.length; i++) {<br>
+                    text += cars[i] + "&ltbr&gt";<br>
+                  }
+            </p>
+        </div>
+        <h2>Different Kinds of Loops</h2>
+        <p class="ptop">JavaScript supports different kinds of loops:</p>
+        <ul>
+            <li><span class="high">for</span> - loops through a block of code a number of times</li>
+            <li><span class="high">for/in</span> - loops through the properties of an object</li>
+            <li><span class="high">for/of</span> - loops through the values of an iterable object</li>
+            <li><span class="high">while</span> - loops through a block of code while a specified condition is true</li>
+            <li><span class="high">do/while</span> - also loops through a block of code while a specified condition is true</li>
+        </ul>
+        <h2>The For Loop</h2>
+        <p class="ptop">The <span class="high">for</span> statement creates a loop with 3 optional expressions:</p>
+        <table class="table">
+            <tr>
+                <td>
+                    for (expression 1; expression 2; expression 3) {<br>
+                        <span class="comment">//  block of code to be executed</span><br>
+                    }
+                </td>
+            </tr>
+        </table>
+        <p class="ptop"><span style="font-weight: 800;">Expression 1</span> is executed (one time) before the execution of the code block.</p>
+        <p><span style="font-weight: 800;">Expression 2</span> defines the condition for executing the code block.</p>
+        <p><span style="font-weight: 800;">Expression 3</span> is executed (every time) after the code block has been executed.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                for (let i = 0; i &lt 5; i++) {<br>
+                    text += "The number is " + i + "&ltbr&gt";<br>
+                }
+            </p>
+        </div>
+        <p class="ptop">From the example above, you can read:</p>
+        <p>Expression 1 sets a variable before the loop starts (let i = 0).</p>
+        <p>Expression 2 defines the condition for the loop to run (i must be less than 5).</p>
+        <p>Expression 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+        <h2>The For In Loop</h2>
+        <p class="ptop">The JavaScript <span class="highlight">for in</span> statement loops through the properties of an Object:</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                for (key in object) {<br>
+                    <span class="comment">// code block to be executed</span><br>
+                }
+            </p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const person = {fname:"John", lname:"Doe", age:25};<br>
+                let text = "";<br>
+                for (let x in person) {<br>
+                text += person[x];<br>
+                }
+            </p>
+        </div>
+        <h3>Example Explained</h3>
+        <ul>
+            <li>The <span style="font-weight: 700;">for</span> in loop iterates over a <span style="font-weight: 700;">person</span> object</li>
+            <li>Each iteration returns a <span style="font-weight: 700;">key</span> (x)</li>
+            <li>The key is used to access the <span style="font-weight: 700;">value</span> of the key</li>
+            <li>The value of the key is <span style="font-weight: 700;">person[x]</span></li>
+        </ul>
+        <h3>For In Over Arrays</h3>
+        <p class="ptop">The JavaScript <span class="highlight">for in</span> statement loops through the properties of an Array:</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                for (variable in array) {<br>
+                    <span class="comment">// code block to be executed</span><br>
+                }<br>
+            </p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+            const numbers = [45, 4, 9, 16, 25];<br>
+            let txt = "";<br>
+            for (let x in numbers) {<br>
+            txt += numbers[x];<br>
+            }
+            </p>
+        </div>
+        <div class="declare">
+            <p>Do not use <span class="high">for in</span> over an Array if the index <span class="high">order</span> is important.</p>
+            <p>The index order is implementation-dependent, and array values may not be accessed in the order you expect.</p>
+            <p>It is better to use a <span class="high">for</span> loop, a <span class="high">for of</span> loop, or <span class="high">Array.forEach()</span> when the order is important.</p>
+        </div>
+        <h3>Array.forEach()</h3>
+        <p class="ptop">The <span class="high">forEach()</span> method calls a function (a callback function) once for each array element.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const numbers = [45, 4, 9, 16, 25];<br>
+                let txt = "";<br>
+                numbers.forEach(myFunction);<br>
+                function myFunction(value, index, array) {<br>
+                  txt += value;<br>
+                }
+            </p>
+        </div>
+        <p class="ptop">Note that the function takes 3 arguments:</p>
+        <ul>
+            <li>The item value</li>
+            <li>The item index</li>
+            <li>The array itself</li>
+        </ul>
+        <p class="ptop">The example above uses only the value parameter. It can be rewritten to:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const numbers = [45, 4, 9, 16, 25];<br>
+                let txt = "";<br>
+                numbers.forEach(myFunction);<br>
+                function myFunction(value) {<br>
+                txt += value;<br>
+                }
+            </p>
+        </div>
+        <h2>The For Of Loop</h2>
+        <p class="ptop">The JavaScript <span class="high">for of</span> statement loops through the values of an iterable object.</p>
+        <p>It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                for (variable of iterable) {<br>
+                    <span class="comment">// code block to be executed</span><br>
+                }<br>
+            </p>
+        </div>
+        <p class="ptop"><span style="font-weight: 800;">variable</span> - For every iteration the value of the next property is assigned to the variable.<br> 
+        Variable can be declared with <span class="high">const</span>, <span class="high">let</span>, or <span class="high">var</span>.</p>
+        <p><span style="font-weight: 800;">iterable</span> - An object that has iterable properties.</p>
+        <h3>Looping over an Array</h3>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                const cars = ["BMW", "Volvo", "Mini"];<br>
+                let text = "";<br>
+                for (let x of cars) {<br>
+                text += x;<br>
+                }
+            </p>
+        </div>
+        <h3>Looping over a String</h3>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                let language = "JavaScript";<br>
+                let text = "";<br>
+                for (let x of language) {<br>
+                text += x;<br>
+                }
+            </p>
+        </div>
+        <h2>The While Loop</h2>
+        <p class="ptop">The <span class="high">while</span> loop loops through a block of code as long as a specified condition is true.</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                while (condition) {<br>
+                    <span class="comment">// code block to be executed</span><br>
+                }
+            </p>
+        </div>
+        <h3>Example</h3>
+        <p class="ptop">In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                while (i &lt 10) {<br>
+                    text += "The number is " + i;<br>
+                    i++;<br>
+                }
+            </p>
+        </div>
+        <p class="declare">If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.</p>
+        <h2>The Do While Loop</h2>
+        <p class="ptop">The <span class="high">do while</span> loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+        <div class="example">
+            <h4>Syntax</h4>
+            <p class="examplep">
+                do {<br>
+                    <span class="comment">// code block to be executed</span><br>
+                }<br>
+                while (condition);
+            </p>
+        </div>
+        <h3>Example</h3>
+        <p class="ptop">The example below uses a <span class="high">do while</span> loop. The loop will always be executed at least once, even if the 
+            condition is false, because the code block is executed before the condition is tested:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                do {<br>
+                    text += "The number is " + i;<br>
+                    i++;<br>
+                  }<br>
+                  while (i &lt 10);
+            </p>
+        </div>
+        <p class="pad-bot">Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

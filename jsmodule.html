@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript Modules</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jsclass.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="main.html">Home</a></button>
+            </div>
+        </div><hr>
+        <h2>Modules</h2>
+        <p class="ptop">JavaScript modules allow you to break up your code into separate files.</p>
+        <p>This makes it easier to maintain a code-base.</p>
+        <p>Modules are imported from external files with the <span class="high">import</span> statement.</p>
+        <p>Modules also rely on <span class="high">type="module"</span> in the &ltscript&gt tag.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                &ltscript type="module"&gt<br>
+                    import message from "./message.js";<br>
+                &lt/script&gt
+            </p>
+        </div>
+        <h2>Export</h2>
+        <p class="ptop">Modules with functions or variables can be stored in any external file.</p>
+        <p>There are two types of exports: Named Exports and Default Exports.</p><hr>
+        <h2>Named Exports</h2>
+        <p class="ptop">Let us create a file named <span class="high">person.js</span>, and fill it with the things we want to export.</p>
+        <p>You can create named exports two ways. In-line individually, or all at once at the bottom.</p>
+        <div class="example">
+            <h4>In-line individually:</h4>
+            <p class="pside"><span class="high">person.js</span></p>
+            <p class="examplep">
+                export const name = "Jesse";<br>
+                export const age = 40;
+            </p>
+        </div>
+        <div class="example">
+            <h4>All at once at the bottom:</h4>
+            <p class="pside"><span class="high">person.js</span></p>
+            <p class="examplep">
+                const name = "Jesse";<br>
+                const age = 40;<br>
+                export {name, age};
+            </p>
+        </div>
+        <h2>Default Exports</h2>
+        <p class="ptop">Let us create another file, named <span class="high">message.js</span>, and use it for demonstrating default export.</p>
+        <p>We can only have one default export in a file.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside"><span class="high">message.js</span></p>
+            <p class="examplep">
+                const message = () => {<br>
+                    const name = "Jesse";<br>
+                    const age = 40;<br>
+                    return name + ' is ' + age + 'years old.';<br>
+                    }; <br>      
+                    export default message;
+            </p>
+        </div>
+        <h2>Import</h2>
+        <p class="ptop">We can import modules into a file in two ways, based on if they are named exports or default exports.</p>
+        <p>Named exports are constructed using curly braces. Default exports are not.</p>
+        <div class="example">
+            <h4>Import from named exports</h4>
+            <p class="pside">Import named exports from the file person.js:</p>
+            <p class="examplep">
+                import { name, age } from "./person.js";
+            </p>
+        </div>
+        <div class="example">
+            <h4>Import from default exports</h4>
+            <p class="pside">Import a default export from the file message.js:</p>
+            <p class="examplep">
+                import message from "./message.js";
+            </p>
+        </div>
+        <div class="pad-bot">
+            <div class="declare">
+                <h3>Note</h3>
+                <p class="ptop">Modules only work with the HTTP(s) protocol.</p>
+                <p>A web-page opened via the file:// protocol cannot use import / export.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

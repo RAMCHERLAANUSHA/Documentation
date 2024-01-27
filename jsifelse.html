@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript if, else, else if, Switch</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jscomparision.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="jsloop.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <p>Conditional statements are used to perform different actions based on different conditions.</p><hr>
+        <h2>Conditional Statements</h2>
+        <p class="ptop">Very often when you write code, you want to perform different actions for different decisions.</p>
+        <p>You can use conditional statements in your code to do this.</p>
+        <p>In JavaScript we have the following conditional statements:</p>
+        <ul>
+            <li>Use <span class="high">if</span> to specify a block of code to be executed, if a specified condition is true</li>
+            <li>Use <span class="high">else</span> to specify a block of code to be executed, if the same condition is false</li>
+            <li>Use <span class="high">else if</span> to specify a new condition to test, if the first condition is false</li>
+            <li>Use <span class="high">switch</span> to specify many alternative blocks of code to be executed</li>
+        </ul>
+        <h3>The if Statement</h3>
+        <p class="ptop">Use the <span class="high">if</span> statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+        <h3>Syntax</h3>
+        <table class="table">
+            <tr>
+                <td>
+                    if (condition) {<br>
+                        <span class="comment">//  block of code to be executed if the condition is true</span><br>
+                    }
+                </td>
+            </tr>
+        </table>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">Make a "Good day" greeting if the hour is less than 18:00:</p>
+            <p class="examplep">
+                if (hour &lt 18) {<br>
+                    greeting = "Good day";<br>
+                  }
+            </p>
+            <p class="pside">The result of greeting will be:</p>
+            <p class="examplep">
+                Good day
+            </p>
+        </div>
+        <h3>The else Statement</h3>
+        <p class="ptop">Use the <span class="highlight">else</span> statement to specify a block of code to be executed if the condition is false.</p>
+        <h3>Syntax</h3>
+        <table class="table">
+            <tr>
+                <td>
+                    if (condition) {<br>
+                        <span class="comment">//  block of code to be executed if the condition is true</span><br>
+                    } else {<br>
+                        <span class="comment">//  block of code to be executed if the condition is false</span><br>
+                    }
+                </td>
+            </tr>
+        </table>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":</p>
+            <p class="examplep">
+                if (hour &lt 18) {<br>
+                    greeting = "Good day";<br>
+                } else {<br>
+                    greeting = "Good evening";<br>
+                }
+            </p>
+            <p class="pside">The result of greeting will be:</p>
+            <p class="examplep">
+                Good day
+            </p>
+        </div>
+        <h3>The else if Statement</h3>
+        <p class="ptop">Use the <span class="highlight">else if</span> statement to specify a new condition if the first condition is false.</p>
+        <h3>Syntax</h3>
+        <table class="table">
+            <tr>
+                <td>
+                    if (condition1) {<br>
+                        <span class="comment">//  block of code to be executed if the condition1 is true</span><br>
+                    }else if (condition2){
+                        <span class="comment">//  block of code to be executed if the condition1 is false and condition2 is true</span><br>
+                    } else {<br>
+                        <span class="comment">//  block of code to be executed if the condition1 is false and condition2 is false</span><br>
+                    }
+                </td>
+            </tr>
+        </table>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":</p>
+            <p class="examplep">
+                if (hour &lt 18) {<br>
+                    greeting = "Good morning";<br>
+                } else if (time &lt 20) {<br>
+                    greeting = "Good day";<br>    
+                } else {<br>
+                    greeting = "Good evening";<br>
+                }
+            </p>
+            <p class="pside">The result of greeting will be:</p>
+            <p class="examplep">
+                Good day
+            </p>
+        </div>
+        <h3>The switch Statement</h3>
+        <p class="ptop">Use the <span class="highlight">switch</span> statement to select one of many code blocks to be executed.</p>
+        <h3>Syntax</h3>
+        <table class="table">
+            <tr>
+                <td>
+                    switch(expression) {<br>
+                        case x:<br>
+                            <span class="comment" >// code block</span><br>
+                          break;<br>
+                        case y:<br>
+                            <span class="comment" >// code block</span><br>
+                          break;<br>
+                        default:<br>
+                        <span class="comment" >// code block</span><br>
+                    }<br>
+                </td>
+            </tr>
+        </table>
+        <p class="ptop">This is how it works:</p>
+        <ul>
+            <li>The switch expression is evaluated once.</li>
+            <li>The value of the expression is compared with the values of each case.</li>
+            <li>If there is a match, the associated block of code is executed.</li>
+            <li>If there is no match, the default code block is executed.</li>
+        </ul>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">The <span class="high">getDay()</span> method returns the weekday as a number between 0 and 6.<br>
+                (Sunday=0, Monday=1, Tuesday=2 ..)<br>
+                This example uses the weekday number to calculate the weekday name:</p>
+            <p class="examplep">
+                switch (new Date().getDay()) {<br>
+                    case 0:<br>
+                      day = "Sunday";<br>
+                      break;<br>
+                    case 1:<br>
+                      day = "Monday";<br>
+                      break;<br>
+                    case 2:<br>
+                       day = "Tuesday";<br>
+                      break;<br>
+                    case 3:<br>
+                      day = "Wednesday";<br>
+                      break;<br>
+                    case 4:<br>
+                      day = "Thursday";<br>
+                      break;<br>
+                    case 5:<br>
+                      day = "Friday";<br>
+                      break;<br>
+                    case 6:<br>
+                      day = "Saturday";<br>
+                }
+            </p>
+            <p class="pside">The result of day will be:</p>
+            <p class="examplep">
+                Friday
+            </p>
+        </div>
+        <h3>The break Keyword</h3>
+        <p class="ptop">When JavaScript reaches a <span class="highlight">break</span> keyword, it breaks out of the switch block.</p>
+        <p>This will stop the execution inside the switch block.</p>
+        <p>It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.</p>
+        <p class="declare"><span style="font-weight: 700;">Note:</span> If you omit the break statement, the next case will be executed even if the evaluation does not match the case.</p>
+        <h3>The default Keyword</h3>
+        <p class="ptop">The <span class="high">default</span> keyword specifies the code to run if there is no case match:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">The <span class="high">getDay()</span> method returns the weekday as a number between 0 and 6.<br>
+                If today is neither Saturday (6) nor Sunday (0), write a default message:</p>
+            <p class="examplep">
+                switch (new Date().getDay()) {<br>
+                    case 6:<br>
+                      text = "Today is Saturday";<br>
+                      break;<br>
+                    case 0:<br>
+                      text = "Today is Sunday";<br>
+                      break;<br>
+                    default:<br>
+                      text = "Looking forward to the Weekend";<br>
+                }
+            </p>
+            <p class="pside">The result of text will be:</p>
+            <p class="examplep">
+                Looking forward to the Weekend
+            </p>
+        </div>
+        <p>The<span class="highlight">default</span> case does not have to be the last case in a switch block:</p>
+        <div class="example">
+            <h4 class="pside">Example</h4>
+            <p class="examplep">
+                switch (new Date().getDay()) {<br>
+                    default:<br>
+                        text = "Looking forward to the Weekend";<br>
+                        break;<br>
+                    case 6:<br>
+                        text = "Today is Saturday";<br>
+                        break;<br>
+                    case 0:<br>
+                        text = "Today is Sunday";<br>
+                }
+            </p>
+        </div>
+        <div class="pad-bot">
+            <p class="declare">If<span class="highlight">default</span>is not the last case in the switch block, remember to end the default case with a break.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

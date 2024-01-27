@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript Arrow Function</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active"  type="button" href="jsthis.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active"  type="button" href="jsclass.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <div class="example">
+            <p class="pside">Arrow functions were introduced in ES6.</p>
+            <p class="pside">Arrow functions allow us to write shorter function syntax:</p>
+            <p class="examplep">
+                let myFunction = (a, b) => a * b;
+            </p>
+        </div>
+        <div class="example">
+            <h4>Before Arrow:</h4>
+            <p class="examplep">
+                hello = function() {<br>
+                    return "Hello World!";<br>
+                }
+            </p>
+        </div>
+        <div class="example">
+            <h4>With Arrow Function:</h4>
+            <p class="examplep">
+                hello = () => {<br>
+                    return "Hello World!";<br>
+                }
+            </p>
+        </div>
+        <p class="ptop">It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the <span class="high">return</span> keyword:</p>
+        <div class="example">
+            <h4 class="pside">Arrow Functions Return Value by Default:</h4>
+            <p class="examplep">
+                hello = () => "Hello World!";
+            </p>
+        </div>
+        <p class="declare"><span style="font-weight: 700;">Note:</span> This works only if the function has only one statement.</p>
+        <p>If you have parameters, you pass them inside the parentheses:</p>
+        <div class="example">
+            <h4 class="pside">Arrow Function With Parameters:</h4>
+            <p class="examplep">
+                hello = (val) => "Hello " + val;
+            </p>
+        </div>
+        <p class="ptop">In fact, if you have only one parameter, you can skip the parentheses as well:</p>
+        <div class="example">
+            <h4 class="pside">Arrow Function Without Parentheses:</h4>
+            <p class="examplep">
+                hello = val => "Hello " + val;
+            </p>
+        </div>
+        <h2>What About <span class="high">this?</span></h2>
+        <p class="ptop">The handling of <span class="high">this</span> is also different in arrow functions compared to regular functions.</p>
+        <p>In short, with arrow functions there are no binding of <span class="high">this</span>.</p>
+        <p>In regular functions the <span class="high">this</span> keyword represented the object that called the function, which could be the window, <br>
+            the document, a button or whatever.</p>
+        <p>With arrow functions the <span class="high">this</span> keyword always represents the object that defined the arrow function.</p>
+        <p>Let us take a look at two examples to understand the difference.</p>
+        <p>Both examples call a method twice, first when the page loads, and once again when the user clicks a button.</p>
+        <p>The first example uses a regular function, and the second example uses an arrow function.</p>
+        <p>The result shows that the first example returns two different objects (window and button), and the second <br>
+            example returns the window object twice, because the window object is the "owner" of the function.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="pside">With a regular function <span class="high">this</span> represents the object that calls the function:</p>
+            <p class="examplep">
+                <span class="comment">// Regular Function:</span><br>
+                hello = function() {<br>
+                  document.getElementById("demo").innerHTML += this;<br>
+                }<br>
+                <span class="comment">// The window object calls the function:</span><br>
+                window.addEventListener("load", hello);<br>
+                <span class="comment">// A button object calls the function:</span><br>
+                document.getElementById("btn").addEventListener("click", hello);
+            </p>
+        </div>
+        <div class="pad-bot">
+            <div class="example">
+                <h4>Example</h4>
+                <p class="pside">With an arrow function <span class="high">this</span> represents the owner of the function:</p>
+                <p class="examplep">
+                    <span class="comment">// Arrow Function:</span><br>
+                    hello = () => {<br>
+                        document.getElementById("demo").innerHTML += this;<br>
+                    }<br>
+                    <span class="comment">// The window object calls the function:</span><br>
+                    window.addEventListener("load", hello);<br>
+                    <span class="comment">// A button object calls the function:</span><br>
+                    document.getElementById("btn").addEventListener("click", hello);
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

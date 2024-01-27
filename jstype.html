@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="doc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="doc.js" defer></script>
+</head>
+<body style="width: 99%;background: rgb(21, 148, 159);">
+
+
+<!-- =================================================navbar=========================================================================================================================================== -->
+    
+    <nav class="navbar navbar-expand-lg d-flex flex-row bg-white fixed-top">
+        <div class="container-fluid justify-content-lg-start">
+            <button onclick="listbutton()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jsmenu" aria-controls="jsmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-list"></i></span>
+            </button>
+            <p class="pnav"><i class="fa-brands fa-js" style="font-size: 30px; color:rgb(21, 148, 159);"></i>.Script</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div>
+            <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <button  class="item" id = "quiz"><a class="nav-link active" aria-current="page" href="jsquiz.html">Quiz</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "logout" onclick="logout()"><a class="nav-link active" aria-current="page" href="main.html">Logout</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "signup"><a class="nav-link active" href="jssignup.html">Sign Up</a></button>
+                </li>
+                <li class="nav-item">
+                    <button  class="item" id = "login"><a class="nav-link active" href="jslogin.html">Log in</a></button>
+                </li>
+                <li class="nav-item m-1 position-relative">                                    
+                    <button class="btn p-0" type="button" id="profile" data-bs-toggle="dropdown" data-bs-popper="none">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user" style="font-size: 25px; color:rgb(21, 148, 159);"></i></a>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-white dropdown-menu-end">
+                        <li><p class="dropdown-item" id="user"></p></li>
+                        <li><p class="dropdown-item" id="useremail"></p></li> 
+                        <li><p class="dropdown-item" id="userscore"></p></li>               
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =======================================================sidebar======================================================== -->
+    <div  style="margin-top: 80px;" id="jsmenu">
+        <nav class="sidebar">
+            <h4>JS Tutorial</h4>
+            <div class="scrollbox">
+                <div class="scrollbox-inner">
+                    <button class="head"><a class="nav-link active" href="into.html">JS Introduction</a></button>
+                    <button class="head"><a class="nav-link active" href="jsin.html">JS in Html</a></button>
+                    <button class="head"><a class="nav-link active" href="jsvariable.html">JS Variables</a></button>
+                    <button class="head"><a class="nav-link active" href="jsoperators.html">JS Operators</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdata.html">JS Data Types</a></button>
+                    <button class="head"><a class="nav-link active" href="jsfuntions.html">JS Functions</a></button>
+                    <button class="head"><a class="nav-link active" href="jsobject.html">JS Objects</a></button>
+                    <button class="head"><a class="nav-link active" href="jsevent.html">JS Events</a></button>
+                    <button class="head"><a class="nav-link active" href="jsdates.html">JS Dates</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmath.html">JS Math</a></button>
+                    <button class="head"><a class="nav-link active" href="jsrandom.html">JS Random Boolean</a></button>
+                    <button class="head"><a class="nav-link active" href="jscomparision.html">JS Comparisons</a></button>
+                    <button class="head"><a class="nav-link active" href="jsifelse.html">JS If Else Switch</a></button>
+                    <button class="head"><a class="nav-link active" href="jsloop.html">JS Loops</a></button>
+                    <button class="head"><a class="nav-link active" href="jstype.html">JS Type Conversion</a></button>
+                    <button class="head"><a class="nav-link active" href="jsthis.html">JS this Keyword</a></button>
+                    <button class="head"><a class="nav-link active" href="jsarrow.html">JS Arrow Function</a></button>
+                    <button class="head"><a class="nav-link active" href="jsclass.html">JS Classes</a></button>
+                    <button class="head"><a class="nav-link active" href="jsmodule.html">JS Modules Exports</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ==============================================content=========================== -->
+    <div class="intro">
+        <h2 class="introh2">JavaScript Type Conversion</h2>
+        <div class="row">
+            <div class="col-6">
+                <button class="prevbtn"><a class="nav-link active" type="button" href="jsloop.html">&ltPrevious</a></button>
+            </div>
+            <div class="col-6">
+                <button class="nextbtn"><a class="nav-link active" type="button" href="jsthis.html">Next&gt</a></button>
+            </div>
+        </div><hr>
+        <div class="declare">
+            <ul>
+                <li>Converting Strings to Numbers</li>
+                <li>Converting Numbers to Strings</li>
+                <li>Converting Dates to Numbers</li>
+                <li>Converting Numbers to Dates</li>
+                <li>Converting Booleans to Numbers</li>
+                <li>Converting Numbers to Booleans</li>
+            </ul>
+        </div>
+        <h3>JavaScript Type Conversion</h3>
+        <p class="ptop">JavaScript variables can be converted to a new variable and another data type:</p>
+        <ul>
+            <li>By the use of a JavaScript function</li>
+            <li>Automatically by JavaScript itself</li>
+        </ul><hr>
+        <h2>Converting Strings to Numbers</h2>
+        <p class="ptop">The global method <span class="highlight">Number()</span> converts a variable (or a value) into a number.</p>
+        <p>A numeric string (like "3.14") converts to a number (like 3.14).</p>
+        <p>An empty string (like "") converts to 0.</p>
+        <p>A non numeric string (like "John") converts to <span class="highlight">NaN</span>(Not a Number).</p>
+        <div class="example">
+            <h4>Examples</h4>
+            <p class="pside">These will convert:</p>
+            <p class="examplep">
+                Number("3.14")<br>
+                Number(Math.PI)<br>
+                Number(" ")<br>
+                Number("")
+            </p>
+            <p class="pside">These will not convert:</p>
+            <p class="examplep">
+                Number("99 88")<br>
+                Number("John")
+            </p>
+        </div>
+        <h3>Number Methods</h3>
+        <table class="table">
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Number()</td>
+                <td>Returns a number, converted from its argument</td>
+            </tr>
+            <tr>
+                <td>parseFloat()</td>
+                <td>Parses a string and returns a floating point number</td>
+            </tr>
+            <tr>
+                <td>parseInt()</td>
+                <td>Parses a string and returns an integer</td>
+            </tr>
+        </table>
+        <h2>Converting Strings to Numbers</h2>
+        <p class="ptop">The global method <span class="high">String()</span> can convert numbers to strings.</p>
+        <p>It can be used on any type of numbers, literals, variables, or expressions:</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                String(x)         <span class="comment">// returns a string from a number variable x</span><br>
+                String(123)       <span class="comment">// returns a string from a number literal 123</span><br>
+                String(100 + 23)  <span class="comment">// returns a string from a number from an expression</span>
+            </p>
+        </div>
+        <p class="ptop">The Number method <span class="high">toString()</span>  does the same.</p>
+        <div class="example">
+            <h4>Example</h4>
+            <p class="examplep">
+                x.toString()<br>
+                (123).toString()<br>
+                (100 + 23).toString()
+            </p>
+        </div>
+        <h2>Converting Dates to Numbers</h2>
+        <p class="ptop">The global method <span class="high">Number()</span> can be used to convert dates to numbers.</p>
+        <div class="example">
+            <p class="examplep">
+                d = new Date();<br>
+                Number(d)       
+                <span class="comment">// returns 1404568027739</span>
+            </p>
+        </div>
+        <p class="ptop">The date method <span class="high">getTime()</span>  does the same.</p>
+        <div class="example">
+            <p class="examplep">
+                d = new Date();<br>
+                d.getTime()      
+                <span class="comment">// returns 1404568027739</span>
+            </p>
+        </div>
+        <h2>Converting Dates to Strings</h2>
+        <p class="ptop">The global method <span class="high">string()</span> can convert dates to strings.</p>
+        <div class="example">
+            <p class="examplep">
+                String(Date())<br>   
+                <span class="comment">// returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"</span>
+            </p>
+        </div>
+        <p>The date method <span class="high">toString()</span>  does the same.</p>
+        <div class="example">
+            <p class="examplep">
+                Date().toString()<br>  
+                <span class="comment">// returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"</span>
+            </p>
+        </div>
+        <h2>Converting Booleans to Numbers</h2>
+        <p class="ptop">The global method <span class="high">Number()</span>can also convert booleans to numbers.</p>
+        <div class="example">
+            <p class="examplep">
+                Number(false)     <span class="comment">// returns 0</span><br>
+                Number(true)      <span class="comment">// returns 1</span> 
+            </p>
+        </div>
+        <h2>Converting Booleans to Strings</h2>
+        <p class="ptop">The global method <span class="high">String()</span>can convert booleans to strings.</p>
+        <div class="example">
+            <p class="examplep">
+                String(false)     <span class="comment">// returns "false"</span><br>
+                String(true)      <span class="comment">// returns "true"</span> 
+            </p>
+        </div>
+        <p class="ptop">The Boolean method <span class="high">toString()</span>  does the same.</p>
+        <div class="example">
+            <p class="examplep">
+                false.toString()     <span class="comment">// returns "false"</span><br>
+                true.toString()      <span class="comment">// returns "true"</span>
+            </p>
+        </div>
+        <h2>Converting Booleans to Strings</h2>
+        <p class="ptop">JavaScript automatically calls the variable's <span class="high">toString()</span> function when you try to "output" an object or a variable:</p>
+        <div class="example">
+            <p class="examplep">
+                document.getElementById("demo").innerHTML = myVar;<br>
+                <span class="comment">// if myVar = {name:"Fjohn"}</span>  <span class="comment">// toString converts to "[object Object]"</span><br>
+                <span class="comment">// if myVar = [1,2,3,4]</span>      <span class="comment">// toString converts to "1,2,3,4"</span><br>
+                <span class="comment">// if myVar = new Date()</span>     <span class="comment">// toString converts to "Fri Jul 18 2014 09:08:55"</span>
+            </p>
+        </div>
+        <p class="ptop">Numbers and booleans are also converted, but this is not very visible:</p>
+        <div class="pad-bot">
+            <div class="example">
+                <p class="examplep">
+                    <span class="comment">// if myVar = 123</span>  <span class="comment">// toString converts to "123"</span><br>
+                    <span class="comment">// if myVar = true</span> <span class="comment">// toString converts to "true"</span><br>
+                    <span class="comment">// if myVar = false</span><span class="comment">// toString converts to "false"</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>
