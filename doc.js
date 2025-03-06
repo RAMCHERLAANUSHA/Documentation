@@ -7,7 +7,7 @@ let quiz = document.getElementById('quiz')
 let flagData = localStorage.getItem('flagstore');
 let flagsData = JSON.parse(flagData);
 let loginbtnnav = document.getElementById('login');
-if (flagsData['flags']==true) {
+if (flagsData && flagsData.flags === true) {
     signupbtn.style.display = "none"
     loginbtnnav.style.display = "none"
     logoutbtn.style.display = "block"
