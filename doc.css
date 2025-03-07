@@ -92,7 +92,7 @@ h4{
     margin-top: 80px;
     margin-left: 280px;
     width: calc(100%-250px);
-    height: 100% !important;
+    height: 100vh !important;
     color: white;
     margin-bottom: 600px;
 }
@@ -112,12 +112,11 @@ h4{
     margin-top: 10%;
     border: none;
     border-radius: 2%;
-    margin-left: 100px;
+    margin-left: 20%;
 }
 .introcontent{
     margin-top: 6%;
     text-align: justify;
-    /* padding-right: 10%; */
     line-height: 40px;
 }
 hr{
@@ -256,7 +255,7 @@ h2{
     display: none;
 }
 .pad-bot{
-    padding-bottom: 10%;
+    padding-bottom: 50px;
 }
 #imageProfile{
     width: 40px;
@@ -271,6 +270,31 @@ h2{
         z-index: 1000;
         overflow-x: hidden !important;
     }
+    .examplep{
+        width: auto !important;
+        overflow-x: auto;
+    }
+    .examplep {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+        max-width: 100%;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    .examplep::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .examplep::-webkit-scrollbar-thumb {
+        background: rgb(150, 150, 150);
+        border-radius: 10px;
+    }
+
+    .examplep::-webkit-scrollbar-track {
+        background: #e0e0e0; 
+    }
 
     .contenthead {
         font-size: 30px;
@@ -280,7 +304,7 @@ h2{
         margin-left: 5% !important;
         width: 90%;
         overflow-x: hidden;
-        height: 100% !important;
+        height: fit-content !important;
     }
 
     .examplep {
@@ -300,11 +324,36 @@ h2{
         margin-left: 5% !important;
         width: 90%;
         overflow-x: hidden;
-        min-height: auto !important;
     }
     .contenthead {
         font-size: 50px;
     }
+    .examplep{
+        width: auto !important;
+        overflow-x: auto;
+    }
+    .examplep {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+        max-width: 100%;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    .examplep::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .examplep::-webkit-scrollbar-thumb {
+        background: rgb(150, 150, 150);
+        border-radius: 10px;
+    }
+
+    .examplep::-webkit-scrollbar-track {
+        background: #e0e0e0; 
+    }
+
 }
 
 
