@@ -1,5 +1,6 @@
 body{
     background-color: rgb(247, 249, 249);
+    overflow: hidden;
 }
 hr {
     color: rgb(21, 148, 159); 
@@ -37,7 +38,7 @@ h2{
     background-color: rgb(253, 252, 252);
     border: 1px solid black;
     margin-bottom: 15px;
-    width: 460px;
+    width: 95%;
     height: 35px;
     text-align: start;
     border-radius: none;
@@ -57,7 +58,7 @@ h2{
     padding-right: 6%;
     padding-top: 1%;
     padding-bottom: 1%;
-    margin-left: 180px;
+    margin-left: 40%;
     display: none;
     border: none;
 }
@@ -78,30 +79,35 @@ h2{
 }
 @media screen and (max-width:600px) {
     body{
-        width: 95% !important;
-        padding-left: 3% !important;
+        width: 90% !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+        margin-left: 4%;
     }
     .card{
+        margin-top: 10%;
         margin: 0 auto;
-        width: 380px;
-        height: 360px;
+        width: 95%;
         display: flex;
-        padding: 0 auto;
+        height: auto;
+    }
+    .upnav{
+        width: 88%;
     }
     .h1{
         font-size: 15px;
-        font-weight: 900; 
+        font-weight: 700; 
     }
     h2{
         font-size:12px;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 4%;
     }
     .btn{
-        width: 300px;
+        width: 90%;
         height: 25px;
         font-size: 10px;
-        font-weight: 900;
+        font-weight: 600;
     }
     #next-btn{
         margin-left: 60px;
@@ -124,11 +130,18 @@ h2{
 }
 @media screen and (min-width:601px) and (max-width:768px){
     body{
-        width: 95% !important;
+        width: 90% !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+        margin-left: 4%;
     }
     .card{
-        margin-left: 90px;
-        margin-top: 20px;
+        margin-top: 10%;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        height: auto;
+        margin-top: 10%;
     }
     .fa-solid.fa-xmark{
         font-size: 30px !important; 
@@ -141,11 +154,17 @@ h2{
 }
 @media screen and (min-width:769px) and (max-width:1024px){
     body{
-        width: 95% !important;
+        width: 100% !important;
+        padding-left: 3% !important;
+        overflow: hidden !important;
     }
     .card{
-        margin-left: 220px;
-        margin-top: 50px;
+        margin: 0 auto;
+        width: 95%;
+        height: auto;
+        display: flex;
+        padding: 0 auto;
+        margin-top: 10%;
     }
     .fa-solid.fa-xmark{
         font-size: 30px !important; 

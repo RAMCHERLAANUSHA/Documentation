@@ -10,7 +10,7 @@ function loginbtn(){
   
     if (emailid === getemail && loginpassword === getpassword){
         alert('Login Successfull');
-        window.location.href = 'main.html'
+        window.location.href = 'index.html'
         let data6 = { flags: true};
         localStorage.setItem('flagstore', JSON.stringify(data6));
     }else{

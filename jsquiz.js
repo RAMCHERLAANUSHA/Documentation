@@ -13,7 +13,7 @@ const questions=[
         answers:[
             {text: "The &ltbody&gt Section",correct: false},
             {text: "The &lthead&gt Section",correct: false},
-            {text: "Both the &ltbody&gt Section and &lthead&gt Section",correct: true},
+            {text: "Both the &ltbody&gt and &lthead&gt Section",correct: true},
             {text: "&ltstyle&gt",correct: false},
         ]
     },

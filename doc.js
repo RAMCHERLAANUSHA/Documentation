@@ -23,7 +23,7 @@ if (flagsData && flagsData.flags === true) {
 
 function logout() {
     alert('Logout Successful');
-    window.location.href = 'main.html';
+    window.location.href = 'index.html';
     let data7 = { flags: false };
     localStorage.setItem('flagstore', JSON.stringify(data7));
     localStorage.setItem('scored', '');
