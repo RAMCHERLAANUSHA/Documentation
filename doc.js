@@ -64,3 +64,29 @@ function listbutton() {
     }
     listbtn.style.zIndex = 5;
 }
+
+function toggleSidebar() {
+    let sidebar = document.getElementById("jsmenu");
+    if (sidebar.style.display === "none" || sidebar.style.display === "") {
+      sidebar.style.display = "block";
+    } else {
+      sidebar.style.display = "none";
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    let sidebar = document.getElementById("jsmenu");
+    if (window.innerWidth <= 768) {
+      sidebar.style.display = "none";
+    }
+  });
+  
+  document.querySelectorAll(".head a").forEach(link => {
+    link.addEventListener("click", function () {
+      let sidebar = document.getElementById("jsmenu");
+      if (window.innerWidth <= 768) { 
+        sidebar.style.display = "none";
+      }
+    });
+  });
+  
